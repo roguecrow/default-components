@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tutorial2/home_drawer.dart';
 
 void main(){
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -16,7 +16,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: homeDrawer(),
+      home: const HomeDrawer(),
       theme: ThemeData(primarySwatch: Colors.pink),
     );
   }

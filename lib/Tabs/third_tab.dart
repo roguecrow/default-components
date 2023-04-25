@@ -5,10 +5,8 @@ class ThirdTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text('3rd tab'),
-      ),
+    return const Center(
+      child: Text('3rd tab'),
     );
   }
 }

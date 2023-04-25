@@ -18,7 +18,7 @@ class _SecondPageState extends State<SecondPage> {
       length: 3,
       child: Scaffold(
       appBar: AppBar(
-        title:Padding(padding: EdgeInsets.all(80),
+        title:const Padding(padding: EdgeInsets.all(80),
           child:Text('THE TAB BAR'),
         ),
         backgroundColor: Colors.pink,
@@ -26,11 +26,11 @@ class _SecondPageState extends State<SecondPage> {
             onPressed: () {
               Navigator.of(context).pop();
             },
-            icon: Icon(Icons.arrow_back_ios_new)
+            icon: const Icon(Icons.arrow_back_ios_new)
         ),
       ),
       body: Column(
-        children: [
+        children: const [
           TabBar(
               tabs:[
                 Tab(
