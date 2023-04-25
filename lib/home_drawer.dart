@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tutorial2/pages/first_page.dart';
+import 'package:tutorial2/searchbar.dart';
 
 class homeDrawer extends StatefulWidget {
   const homeDrawer({Key? key}) : super(key: key);
@@ -17,7 +18,8 @@ class _homeDrawerState extends State<homeDrawer> {
         backgroundColor: Colors.black,
         actions:[
           IconButton(
-              onPressed: () {},
+              onPressed: () {showSearch(context: context, delegate: SearchBar());
+                },
               icon: const Icon(Icons.search_rounded)
           ),
           IconButton(

@@ -5,19 +5,77 @@ class FirstPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('My Page',style: TextStyle(fontSize: 34),),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-        backgroundColor: Colors.black87,
+    return  Scaffold(
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            backgroundColor: Colors.black38,
+            leading: IconButton(
+                onPressed: () => Navigator.of(context).pop(),
+                icon: const Icon(Icons.arrow_back_ios_new),
+            ),
+            title:Padding(padding: EdgeInsets.all(80),
+              child: Text('S I L V E R B A R'),
+            ),
+            expandedHeight: 100.0,
+            floating: true,
+            pinned: true,
+            flexibleSpace: FlexibleSpaceBar(
+              background: Container(
+                color: Colors.black87,
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.all(20),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  height: 400,
+                  color: Colors.black45,
+                ),
+            ),
+          ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.all(20),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  height: 400,
+                  color: Colors.black45,
+                ),
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.all(20),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  height: 400,
+                  color: Colors.black45,
+                ),
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.all(20),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  height: 400,
+                  color: Colors.black45,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
-      body: const Center(
-        child: Text('Hello World'),
-      ),
-      backgroundColor: Colors.black38,
     );
   }
 }
