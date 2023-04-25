@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tutorial2/pages/first_page.dart';
+import 'package:tutorial2/pages/second_page.dart';
 import 'package:tutorial2/searchbar.dart';
 
 class homeDrawer extends StatefulWidget {
@@ -64,6 +65,21 @@ class _homeDrawerState extends State<homeDrawer> {
                 onTap: (){
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => FirstPage())
+                  );
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.list,
+                  color: Colors.white,
+                ),
+                title: Text('page 2',style:TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                ),
+                onTap: (){
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => SecondPage())
                   );
                 },
               ),
