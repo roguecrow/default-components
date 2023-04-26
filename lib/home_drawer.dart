@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tutorial2/pages/first_page.dart';
+import 'package:tutorial2/pages/fourth_page.dart';
 import 'package:tutorial2/pages/second_page.dart';
 import 'package:tutorial2/pages/third_page.dart';
 import 'package:tutorial2/searchbar.dart';
@@ -22,17 +23,60 @@ class _HomeDrawerState extends State<HomeDrawer> {
           IconButton(
               onPressed: () {showSearch(context: context, delegate: SearchBar());
                 },
-              icon: const Icon(Icons.search_rounded)
+              icon: const Icon(Icons.search_rounded),
+          ),
+          PopupMenuButton(
+              itemBuilder: (context)=>[
+                PopupMenuItem(
+                    child: Row(
+                      children: const [
+                        Icon(
+                            Icons.offline_bolt,
+                          color: Colors.black,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 10.0),
+                          child: Text('Item01'),
+                        ),
+                      ],
+                    ),
+                ),
+                PopupMenuItem(
+                  child: Row(
+                    children: const [
+                      Icon(
+                        Icons.offline_bolt,
+                        color: Colors.black,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 10.0),
+                        child: Text('Item02'),
+                      ),
+                    ],
+                  ),
+                ),
+                PopupMenuItem(
+                  child: Row(
+                    children: const [
+                      Icon(
+                        Icons.offline_bolt,
+                        color: Colors.black,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 10.0),
+                        child: Text('Item03'),
+                      ),
+                    ],
+                  ),
+                ),
+              ]
           ),
           IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.notifications)
-          ),
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.more_vert)
+            onPressed: () {},
+            icon: const Icon(Icons.notifications),
           ),
         ],
+
         shadowColor: Colors.black45,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
@@ -58,7 +102,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                 leading: const Icon(Icons.list,
                   color: Colors.white,
                 ),
-                title: const Text('page 1',style:TextStyle(
+                title: const Text('SILVER APP BAR',style:TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                 ),
@@ -73,7 +117,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                 leading: const Icon(Icons.list,
                   color: Colors.white,
                 ),
-                title: const Text('page 2',style:TextStyle(
+                title: const Text('TAB BAR',style:TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                 ),
@@ -88,7 +132,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                 leading: const Icon(Icons.list,
                   color: Colors.white,
                 ),
-                title: const Text('page 3',style:TextStyle(
+                title: const Text('BOTTOM NAV BAR',style:TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                 ),
@@ -96,6 +140,21 @@ class _HomeDrawerState extends State<HomeDrawer> {
                 onTap: (){
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => const ThirdPage())
+                  );
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.list,
+                  color: Colors.white,
+                ),
+                title: const Text('TEXT FIELD',style:TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                ),
+                onTap: (){
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const FourthPage())
                   );
                 },
               ),
