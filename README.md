@@ -27,14 +27,6 @@ If you find any bugs or have suggestions for improvement, please submit an issue
 
 MyApp is released under the [MIT License](https://opensource.org/licenses/MIT).
 
-
-
-
-
-
-
-
-
 # Documentation for HomeDrawer Widget
 
 The `HomeDrawer` widget is a custom widget that creates a navigation drawer and an app bar for an app. It provides a customizable and reusable way to implement a common UI pattern in Flutter apps.
@@ -62,11 +54,6 @@ The following packages are imported:
       - `Text` - a widget that displays the `_notificationCount` variable as the notification badge in the app bar.
   - `Drawer` - a widget that creates a navigation drawer for the app. It uses the `_buildDrawerListTile` method to create a list of `ListTile` widgets that are used for navigation to different pages in the app.
   - `FloatingActionButton` - a widget that creates a circular button used to increment the notification count. When pressed, it calls the `_incrementNotificationCount()` method to increment the notification count and trigger the animation of the notification badge.
-  
-  
-  
-  
-  
   
   # FirstPage Widget
 
@@ -199,6 +186,102 @@ Before you get started, you need to have Flutter installed on your machine. You 
 14. The `Expanded` widget expands the `TabBarView` widget to fill the remaining space of the screen.
 
 15. The `TabBarView` widget creates the content for each tab. We've created three widgets, `FirstTab`, `SecondTab`, and `ThirdTab`, to be displayed on each tab.
+
+
+
+
+# Second Page
+
+This Flutter code defines a `SecondPage` widget which extends `StatefulWidget`. The widget contains a tab bar with three tabs and a corresponding tab bar view.
+
+## Usage
+
+The `SecondPage` widget is used as a screen in a Flutter app. To use this widget, simply add it to your app's navigation stack.
+
+## Example
+
+```dart
+Navigator.push(
+  context,
+  MaterialPageRoute(builder: (context) => SecondPage()),
+);
+```
+
+## Tab Bar
+
+The tab bar is created using a `TabBar` widget. It contains three tabs, each with an icon: home, settings, and person. 
+
+## Tab Bar View
+
+The `TabBarView` widget is used to create the content for each tab. There are three tabs: `FirstTab`, `SecondTab`, and `ThirdTab`. 
+
+## App Bar
+
+The app bar of the page is themed pink and includes an arrow back button in the leading position. 
+
+## Dependencies
+
+This code depends on the following Flutter packages:
+- `flutter/material.dart`
+
+## Requirements
+
+This code requires Flutter 2.0 or higher.
+
+# Flutter ThirdPage Widget
+
+The `ThirdPage` widget is a stateful widget that displays a bottom navigation bar with multiple tabs. It allows the user to switch between different screens by tapping on the tabs.
+
+## Usage
+
+To use this widget, import it into your Flutter project:
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:my_app/third_page.dart';
+```
+
+Then, add the `ThirdPage` widget to your widget tree:
+
+```dart
+ThirdPage(),
+```
+
+## Documentation
+
+Here's a documentation for the `ThirdPage` widget:
+
+1. `ThirdPage` is a `StatefulWidget` that creates an instance of the state `State<ThirdPage>` which builds the widget.
+
+2. `_ThirdPageState` class is a `State` class that contains the widget tree and creates the user interface for the `ThirdPage` widget.
+
+3. `_selectedIndex` variable keeps track of the current selected index/tab in the `BottomNavigationBar` widget.
+
+4. `optionStyle` is a `TextStyle` object that defines the common style for the texts that would be displayed for each tab in `_widgetOptions`.
+
+5. `_widgetOptions` is a static list of `Text` widgets that are used to create the content displayed in the body of the screen. It contains a list of widget options indexed by their position in the list.
+
+6. `_onItemTapped` is a method that gets called whenever a tab on the bottom navigation bar gets tapped.
+
+7. `Scaffold` widget provides a basic structure for the app, including an app bar, body, and bottom navigation bar.
+
+8. `AppBar` widget specifies the app bar that appears at the top of the screen, including the app bar title, background color and leading icon.
+
+9. `IconButton` creates a button widget with an icon that is typically used for the leading icon in the app bar. Here, we've used it to create a back button that navigates to the previous page.
+
+10. `Center` widget is used to center the content on the screen.
+
+11. `BottomNavigationBar` widget is displayed at the bottom of the screen, and we've specified the menu items, text labels and icons for each menu item.
+
+12. `selectedItemColor` property specifies the selected menu item icon color.
+
+13. `onTap` method is called when a menu item is tapped, and we've implemented the logic to change the `_selectedIndex` to the index of the selected menu item.
+
+14. The `body` property of the `Scaffold` widget is displayed in the area below the app bar and above the bottom navigation bar. We've used it to display one of the items in `_widgetOptions` based on the selected index.
+
+## License
+
+This widget is licensed under the [MIT License](https://github.com/my_username/my_app/blob/main/LICENSE).
 
 # FourthPage Widget
 
